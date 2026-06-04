@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Registration First Page</title>
+            
+            
+       <style>
+                  *{
+                     margin: 0;
+                     padding: 0;
+                     box-sizing: border-box;
+                     font-family: Arial, sans-serif;
+                  }
+
+                  body{
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       min-height: 100vh;
+                       background: #0d1117;
+                  }
+
+                  section{
+                        width: 850px;
+                        padding: 30px;
+                        background: rgba(20,20,30,0.9);
+                        border: 3px solid transparent;
+                        border-radius: 20px;
+                        box-shadow: 0 0 20px #00ffff,
+                        0 0 40px #ff4d94;
+                  }
+
+                       h2{
+                          text-align: center;
+                          color: rgb(46, 232, 246);
+                          margin-bottom: 25px;
+                          font-size: 30px;
+                        }
+
+                        form{
+                              display: flex;
+                              flex-direction: column;
+                        }
+
+                        label{
+                              color: white;
+                              margin-top: 10px;
+                              margin-bottom: 5px;
+                        }
+
+                        input,
+                        textarea{
+                                 width: 100%;
+                                 padding: 12px;
+                                  border: 2px solid #00ffff;
+                                  border-radius: 25px;
+                                 background: transparent;
+                                    color: rgb(26, 252, 244);
+                                    outline: none;
+                                    margin-bottom: 10px;
+                              }         
+
+                        textarea{
+                              resize: none;
+                              height: 100px;
+                        }
+
+                        button{
+                              margin-top: 25px;
+                              padding: 19px;
+                              border: none;
+                              border-radius: 25px;
+                              font-size: 18px;
+                              font-weight: bold;
+                              color: white;
+                              cursor: pointer;
+                              background: linear-gradient(90deg,#00ffff,#ff4d94,rgb(232, 113, 113));
+                              transition: 0.3s;
+                        }
+
+                        button:hover{
+                              transform: scale(1.05);
+                              box-shadow: 0 0 15px #00ffff,
+                              0 0 25px rgb(235, 235, 45)
+                              0 0 25px #ff4d94;
+                        }
+            </style>
+    </head>
+     <body>
+          <section>
+                  <h2>Summer Intership</h2>
+                 <form>
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name">
+
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email">
+
+                      <label for="college">College:</label>
+                       <input type="text" id="college" name="college">
+
+                      <label for="semester">Semester:</label>
+                      <input type="text" id="semester" name="semester">
+
+                      <label for="rollno">Roll number:</label>
+                      <input type="text" id="rollno" name="rollno">
+
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message"></textarea>
+
+                      <button type="submit">Submit</button>
+                </form>
+            </section>
+      </body>
+</html>
