@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login First Page</title>
+
+    <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background:#0f1020;
+    }
+
+    .box{
+      position:relative;
+      width:350px;
+      height:450px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#1c1c2b;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 0 25px rgba(0,0,0,0.5);
+    }
+
+     
+    .box::before{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:linear-gradient(0deg,
+      transparent,
+      #00ccff,
+      #00ccff);
+      animation:animate 4s linear infinite;
+    }
+
+    .box::after{
+      content:'';
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:linear-gradient(0deg,
+      transparent,
+      #ff0066,
+      #ff0066);
+      animation:animate 4s linear infinite;
+      animation-delay:-2s;
+    }
+
+    @keyframes animate{
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+
+    .login{
+      position:absolute;
+      inset:4px;
+      background:#141428;
+      border-radius:16px;
+      z-index:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .loginBx{
+      width:80%;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .loginBx h2{
+      color:#fff;
+      text-align:center;
+      letter-spacing:2px;
+    }
+
+    .loginBx h2 i{
+      color:#ff0066;
+      margin:0 8px;
+    }
+
+    .loginBx input{
+      width:100%;
+      padding:12px 15px;
+      border:2px solid #00ccff;
+      outline:none;
+      background:transparent;
+      border-radius:30px;
+      color:#fff;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .loginBx input:focus{
+      box-shadow:0 0 15px #00ccff;
+    }
+
+    .loginBx input[type="submit"]{
+      background:linear-gradient(90deg,#00ccff,#ff0066);
+      border:none;
+      cursor:pointer;
+      font-weight:bold;
+      color:#fff;
+      transition:0.3s;
+    }
+
+    .loginBx input[type="submit"]:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 20px #ff0066;
+    }
+
+    .group{
+      display:flex;
+      justify-content:space-between;
+    }
+
+    .group a{
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .group a:nth-child(2){
+      color:#ff0066;
+      font-weight:bold;
+    }
+  </style>
+
+ 
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="login">
+      <div class="loginBx">
+
+        <h2>
+          <i class="fa-solid fa-right-to-bracket"></i>
+          LOGIN
+          <i class="fa-solid fa-heart"></i>
+        </h2>
+
+        <input type="text" placeholder="Username">
+
+        <input type="password" placeholder="Password">
+
+        <input type="submit" value="Sign In">
+
+        <div class="group">
+          <a href="#">Forgot Password</a>
+          <a href="#">Sign Up</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
